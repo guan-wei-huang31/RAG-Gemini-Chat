@@ -14,7 +14,7 @@ RAG-Gemini-Chat is an AI-powered assistant that leverages **Retrieval-Augmented 
 - **Express.js middleware** to connect frontend and backend APIs
 - **Flask API** for AI model execution and query handling
 
-  <img src="figure/AdvanceRAG.png" alt="Advance RAG flow" width="800" height="auto"/>
+  <img src="figure/AdvanceRAG1.png" alt="Advance RAG flow" width="800" height="auto"/>
 
 ## 📚Tech Stack
 
