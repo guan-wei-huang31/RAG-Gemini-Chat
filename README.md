@@ -1,19 +1,18 @@
-# RAGQueryAI
+# RAG-Gemini-Chat
 
 ## Overview
 
-RAGQueryAI is an AI-powered assistant that leverages **Retrieval-Augmented Generation (RAG)** using **LangChain, Ollama, and ChromaDB** to answer product-related queries. The backend is built with **Flask (Python)** for AI processing and **Express.js (Node.js)** for API routing, while the frontend is developed using **React.js**.
+RAG-Gemini-Chat is an AI-powered assistant that leverages **Retrieval-Augmented Generation (RAG)** using **Gemini AI**, **ChromaDB**, and **SQLite** to answer product-related queries. The backend is built with **Flask (Python)** for AI processing and **Express.js (Node.js)** for API routing, while the frontend is developed using **React.js**.
 
 ## 🚀Features
 
 - **Retrieval-Augmented Generation (RAG)** for accurate AI-driven responses
 - **Vector-based search with ChromaDB** for efficient query handling
-- **Ollama LLM & embeddings** to process and retrieve relevant product information
+- **Gemini AI embeddings** to process and retrieve relevant product information
 - **SQLite database integration** for structured product details
 - **React.js frontend (powered by Vite)** for a simple and user-friendly UI
 - **Express.js middleware** to connect frontend and backend APIs
 - **Flask API** for AI model execution and query handling
-- **LangChain** for building retrieval and AI-assisted workflows
 
   <img src="figure/AdvanceRAG.png" alt="Advance RAG flow" width="800" height="auto"/>
 
@@ -22,7 +21,8 @@ RAGQueryAI is an AI-powered assistant that leverages **Retrieval-Augmented Gener
 ### **Backend**
 
 - Python (Flask)
-- LangChain (Ollama LLM, ChromaDB VectorStore)
+- Gemini AI (Embeddings + Content Generation)
+- ChromaDB for vector-based search
 - SQLite for structured data
 - SQLAlchemy for database operations
 
@@ -40,30 +40,37 @@ RAGQueryAI is an AI-powered assistant that leverages **Retrieval-Augmented Gener
 
 ### **1️⃣ Clone the Repository**
 
-```sh
-git clone https://github.com/YOUR_USERNAME/RAGQueryAI.git
-cd RAGQueryAI
+```
+git clone https://github.com/guan-wei-huang31/RAG-Gemini-Chat.git
+cd RAG-Gemini-Chat
 ```
 
 ### **2️⃣ Backend Setup**
 
-```sh
+```
 cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+Set up environment variables:
+
+```
+echo "GOOGLE_API_KEY=your-api-key" > .env
+```
+
+
 Run the Flask API:
 
-```sh
+```
 python rag_api.py
 ```
 
 
 ### **3️⃣ Frontend Setup**
 
-```sh
+```
 cd frontend
 npm install
 npm run dev
@@ -72,7 +79,7 @@ npm run dev
 
 ### **4️⃣ Middleware/API Gateway Setup**
 
-```sh
+```
 cd backend
 node server.js
 ```
@@ -92,11 +99,13 @@ node server.js
 ```
 RAGQueryAI/
 │── backend/
-│   ├── db/              (SQLite database & ChromaDB files)
-│   ├── rag_api.py       (Flask API with RAG processing)
-│   ├── server.js        (Express.js middleware)
-│   ├── requirements.txt (Python dependencies)
-│   ├── package.json     (Node.js dependencies)
+│   ├── flask-api
+│       ├── db/              (SQLite database & ChromaDB files)
+│       ├── rag_api.py       (Flask API with RAG processing)
+│       ├── requirements.txt (Python dependencies)
+│   ├── node-server
+│       ├── server.js        (Express.js middleware)
+│       ├── package.json     (Node.js dependencies)
 │── frontend/
 │   ├── src/             (React components)
 │       ├── App.jsx      (Main React component)
