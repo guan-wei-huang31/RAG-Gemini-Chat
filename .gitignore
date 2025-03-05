@@ -1,0 +1,16 @@
+# Backend
+backend/node-server/node_modules/
+backend/flask-api/venv/
+backend/flask-api/chroma_db
+backend/flask-api/__pycache__/
+backend/*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+
+#
+.DS_Store
+Thumbs.db
+*.cache
