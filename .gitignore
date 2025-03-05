@@ -3,6 +3,7 @@ backend/node-server/node_modules/
 backend/flask-api/venv/
 backend/flask-api/chroma_db
 backend/flask-api/__pycache__/
+backend/flask-api/.env
 backend/*.log
 
 # Frontend
